@@ -5,8 +5,19 @@
       "id": 4
     },
     {
-      "nome": "Criar Dashboard",
-      "id": 5
+      "id": 5,
+      "nome": "Criar Dashboard"
+    }
+  ],
+  "tarefas": [
+    {
+      "id": 1,
+      "duracaoEmSegundos": 120,
+      "descricao": "Configuração do ambiente",
+      "projeto": {
+        "id": 1,
+        "nome": "Vuex"
+      }
     }
   ]
 }
