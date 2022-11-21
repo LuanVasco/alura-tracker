@@ -37,7 +37,8 @@
             </div>
             </section>
             <footer class="modal-card-foot">
-              <button class="button is-success">Salvar alterações</button>
+              <button @click="alterarTarefa"
+                class="button is-success">Salvar alterações</button>
               <button @click="fecharModal"
                 class="button"
               >
@@ -55,7 +56,7 @@
   import FormularioPlay from '@/components/FormularioPlay.vue';
   import TarefaItem from '@/components/TarefaItem.vue';
   import BoxTask from '@/components/BoxTask.vue';
-  import { CADASTRAR_TAREFA, OBTER_PROJETOS, OBTER_TAREFAS } from "@/store/tipo-acoes";
+  import { ALTERAR_TAREFA, CADASTRAR_TAREFA, OBTER_PROJETOS, OBTER_TAREFAS } from "@/store/tipo-acoes";
   import ITarefa from "@/interfaces/ITarefa";
   
   export default defineComponent({
@@ -84,6 +85,9 @@
       },
       fecharModal() {
         this.tarefaSelecionada = null
+      },
+      alterarTarefa() {
+        this.store.dispatch(ALTERAR_TAREFA, this.tarefaSelecionada).then(() => this.fecharModal())
       }
     },
     setup() {

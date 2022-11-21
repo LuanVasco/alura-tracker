@@ -21,7 +21,7 @@
     },
     {
       "duracaoEmSegundos": 3,
-      "descricao": "Teste",
+      "descricao": "Aprendendo vuex",
       "projeto": {
         "nome": "Dashboard",
         "id": 6
